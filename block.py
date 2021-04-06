@@ -26,7 +26,7 @@ class Block:
             for tx in self.txs:
                 root.update(tx.txHash.encode())
         else:
-            root.update(self.txs.txHash.encode())
+            return self.txs.txHash
         return root.hexdigest()
 
     def getJSON(self):

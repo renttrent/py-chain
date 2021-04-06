@@ -1,4 +1,4 @@
-from datetime import datetime
+from time import time
 import json
 from block import Block
 from tx import Tx
@@ -15,7 +15,7 @@ class Chain:
         self.lastindex = self.chain[-1].index
 
     def createGenesis(self):
-        genesis = Block(str(datetime.now()), Tx('', '', 1.0, 'Genesis'), '')
+        genesis = Block(str(time()), Tx('', '', 1.0, 'Genesis'), '')
         self.addBlock(genesis)
         self.lastindex = genesis.index
 
