@@ -19,5 +19,7 @@ class MerkleTree:
             return self.getMerkleRoot(index + 2, hashFunc)
 
 
-m = MerkleTree()
-print(m.getMerkleRoot(index=0))
+if __name__ == "__name__":
+
+    m = MerkleTree()
+    print(m.getMerkleRoot(index=0))

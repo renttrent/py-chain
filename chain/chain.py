@@ -1,7 +1,7 @@
 from time import time
 import json
-from block import Block
-from tx import Tx
+from chain.block import Block
+from chain.tx import Tx
 
 
 class Chain:
@@ -48,5 +48,5 @@ class Chain:
         return rv
 
     def writeJSON(self):
-        with open('file.json', 'w') as file:
+        with open('db.json', 'w') as file:
             json.dump(self.getJSON(), file, indent=4)
